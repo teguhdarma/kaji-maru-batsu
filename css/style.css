@@ -1,0 +1,179 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  margin-top: 200px;
+
+}
+
+#question {
+  font-size: 20px;
+  text-align: center;
+}
+
+#question2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#question3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#buttons {
+  text-align:center;
+}
+
+#kekka {
+  text-align:center;
+}
+
+.button {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  background: rgb(201, 200, 200);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 8px;
+  color: #111;
+  font-size: 20px;
+  outline: none;
+}
+
+.button2 {
+  margin: 10px;
+  width: 230px;
+  height: 40px;
+  background: rgb(201, 200, 200);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 8px;
+  color: #111;
+  font-size: 20px;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #a1d7e0;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #a1d7e0;
+  cursor: pointer;
+}
+
+
+.top {
+  background-color: #eee;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  line-height: 200px;
+}
+
+.top_txt {
+  text-align: center;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1080px;
+}
+
+.content_item {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+.content_item img {
+  width: 350px;
+  height: auto;
+}
+
+.content_txt {
+  padding: 10px 0 0 20px;
+}
+
+.content_txt p {
+  max-width: 500px;
+  padding: 10px 0;
+}
+
+.more_btn {
+  background-color: rgb(199, 197, 197);
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
+
+.more_btn a {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+/* page_1.html,page_2.html,page_3.htmlページ */
+.page_content {
+  text-align: center;
+}
+
+.page_content h2,.page_content img,.content_inner {
+  padding: 10px 0;
+}
+
+.page_content img {
+  width: 500px;
+  height: auto;
+}
+
+.content_inner {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.btn {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 80%;
+}
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.example6 img{
+  margin-right: auto;
+}
