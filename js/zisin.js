@@ -8,7 +8,7 @@ var qa = [
     ['硬い地盤と柔らかい地盤では、硬い地盤の方がよく揺れる。○でしょうか？×でしょうか？', 2],
     ['震度は、地震の揺れの強さの程度を表していますが、現在日本では、7段階の区分に分かれている。○でしょうか？×でしょうか？', 2],
     ['大地震が起きたら、まず市が指定した広域避難場所へ避難する。○でしょうか？×でしょうか？', 2],
-    ['机大災害時はテレビやラジオはあてにならないので、その場にいる人の声をたよりに行動を決定する。○でしょうか？×でしょうか？', 2],
+    ['大災害時はテレビやラジオはあてにならないので、その場にいる人の声をたよりに行動を決定する。○でしょうか？×でしょうか？', 2],
 ]
   var a = [
     ['　震度6－7クラスでは、全く何もできません。下手に動いてケガをしないように、机の下などに身を隠して、揺れの収まるまで待ちましょう。家族を置いて自分だけ飛び出すのはやめましょう。家族が非難します。', 1],
@@ -25,11 +25,12 @@ var qa = [
 
   var count = 0;
   var correctNum = 0;
-  
+  var kekkacount = 0;
   window.onload = function() {
     // 最初の問題を表示
     var question = document.getElementById('question');
     question.innerHTML = (count + 1) + '問目：' + qa[count][0];
+    document.getElementById("abc").style.display = "none";
   };
   
   // クリック時の答え判定
@@ -38,25 +39,33 @@ var qa = [
       Swal.fire({
         icon:'success',
        title: '正解!',
+       
      })
       correctNum++;
+      kekkacount++;
     }else{
       Swal.fire({
         icon: 'error',
         title: '残念',
         text: a[count][0],
       })
+     kekkacount++;
     }
-  
-   
-  
+    //結果ボタン表示
+    if(kekkacount == 10){
+      document.getElementById("abc").style.display = "block";
+    }else{
+      document.getElementById("abc").style.display = "none";
+    }
     // 次の問題表示
     count++;
     var question = document.getElementById('question');
     question.innerHTML = (count + 1) + '問目：' + qa[count][0];
+
+    
   }
 
   function kekka() {
     Swal.fire('あなたの正解数は' + correctNum + '問です！')
-   
-  }
+      
+    }

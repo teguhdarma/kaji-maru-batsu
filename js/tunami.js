@@ -25,11 +25,12 @@ var qa = [
 
   var count = 0;
   var correctNum = 0;
-  
+  var kekkacount = 0;
   window.onload = function() {
     // 最初の問題を表示
     var question = document.getElementById('question');
     question.innerHTML = (count + 1) + '問目：' + qa[count][0];
+    document.getElementById("abc").style.display = "none";
   };
   
   // クリック時の答え判定
@@ -38,24 +39,33 @@ var qa = [
       Swal.fire({
         icon:'success',
        title: '正解!',
+       
      })
       correctNum++;
+      kekkacount++;
     }else{
       Swal.fire({
         icon: 'error',
         title: '残念',
         text: a[count][0],
       })
+     kekkacount++;
     }
-  
-   
-  
+    //結果ボタン表示
+    if(kekkacount == 10){
+      document.getElementById("abc").style.display = "block";
+    }else{
+      document.getElementById("abc").style.display = "none";
+    }
     // 次の問題表示
     count++;
     var question = document.getElementById('question');
     question.innerHTML = (count + 1) + '問目：' + qa[count][0];
+
+    
   }
+
   function kekka() {
     Swal.fire('あなたの正解数は' + correctNum + '問です！')
-   
-  }
+      
+    }
